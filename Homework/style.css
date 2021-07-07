@@ -1,0 +1,45 @@
+.mainBox { width: auto;
+    height: 775px;
+padding: 70px;
+border: 20px solid black}
+
+.box1 {position: relative;
+    width: 401px;
+    height: 130px;
+    display: inline-block;
+    right: 19px;
+    background-color: green}
+
+.box2 {display: inline-block;
+    width: 400px;
+    height: 760px;
+    background-color: green}
+    
+
+.box3 {height: 550px;
+    display: inline-block;
+    width: 335px;
+    position: relative;
+    left: 20px;
+    background-color: green}
+
+.box4 { width: 400px;
+    height: 600px;
+    position: relative;
+    right: 20px;
+    top: -620px;
+    background-color: green}
+
+.box5 {display: inline-block;
+    width: 338px;
+    height: 195px;
+    position: relative;
+    top: -815px;
+    left: 829px;
+    background-color: green}
+
+.text {display: flex;
+    justify-content: center;
+    align-items: center;
+    color:black;}
+
