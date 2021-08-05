@@ -29,12 +29,12 @@ setInterval(()=>{
     
     let bday=3
     let age = Math.abs(currentYear-birthdayYear-1)
-    let month = Math.abs(currentMonth-birthdayMonth)
+    let month = Math.abs(currentMonth)
     let day = Math.abs(31-birthdayDay+5)
     
     let btn=document.querySelector('.btn')
     
-    btn.innerHTML=`${age + "Year"} ${month+3+ "Month"}  ${day + "Days" } ${currentDate.getHours() + 'Hours'} : ${currentDate.getMinutes()+'Minutes'}: ${currentDate.getSeconds()+ 'Seconds'}: ${currentDate.getMilliseconds()+'Milliseconds'}`
+    btn.innerHTML=`${age + "Year"} ${month+ "Month"}  ${day + "Days" } ${currentDate.getHours() + 'Hours'} : ${currentDate.getMinutes()+'Minutes'}: ${currentDate.getSeconds()+ 'Seconds'}: ${currentDate.getMilliseconds()+'Milliseconds'}`
     },1)
 
 
