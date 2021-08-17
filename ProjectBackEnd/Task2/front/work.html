@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block content %}
+{% for isci in isciler %}
+<div class="card mt-5">
+    <div class="card-body">
+        <h5 class="card-title">
+            Ad: {{isci['ad']}} Soyad : {{isci['soyad']}}
+        </h5>
+        <p class="card-text">
+            Email : {{isci['email']}}
+        </p>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
