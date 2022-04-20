@@ -1,21 +1,3 @@
-// let d1= new Date()
-// let d2= new Date(2001, 12, 16)
-
-// let time= new Date(d1.getTime() - d2.getTime())
-// let years= time.getFullYear()
-// let days= time.getDay
-// let hour= time.getHours
-// let minutes= time.getMinutes
-// let second= time.getSeconds
-// let msecons= time.getMilliseconds
-
-// setInterval(()=>{
-//     let d1=new Date()
-//     let d2= new Date(2001, 12, 16)
-//     let btn=document.querySelector('.btn')
-//     btn.innerHTML= `${d.getHours()} : ${d.getMinutes()}: ${d.getSeconds()}: ${d.getMilliseconds()}`
-// },1)
-
 setInterval(()=>{
 
     let currentDate = new Date()
@@ -27,14 +9,32 @@ setInterval(()=>{
     let currentDay = currentDate.getDate()
     let birthdayDay = birthday.getDate()
     
-    let bday=3
-    let age = Math.abs(currentYear-birthdayYear-1)
-    let month = Math.abs(currentMonth)
-    let day = Math.abs(31-birthdayDay+5)
+    function newbdayyear(currentMonth,birthdayMonth,currentDay,birthdayDay){
+        if(currentMonth=birthdayMonth , currentDay>birthdayDay){
+            let newbdayyear1 = currentYear-birthdayYear
+            return newbdayyear1
+
+        }
+        else{
+            let newbdayyear2 = currentYear-birthdayYear-1
+            return newbdayyear2
+        }
+    }
+    let month = Math.abs(currentMonth+1)
+    function newbdaydate (){
+        if(birthdayDay>=currentDay){
+            let newbday1 = birthdayDay+currentDay-1
+            return newbday1
+        }
+        else{
+             let newbday2 = currentDay-birthdayDay
+             return newbday2
+        }
+    }
     
     let btn=document.querySelector('.btn')
     
-    btn.innerHTML=`${age + "Year"} ${month+ "Month"}  ${day + "Days" } ${currentDate.getHours() + 'Hours'} : ${currentDate.getMinutes()+'Minutes'}: ${currentDate.getSeconds()+ 'Seconds'}: ${currentDate.getMilliseconds()+'Milliseconds'}`
+    btn.innerHTML=`${newbdayyear() + "Year"} ${month+ "Month"}  ${newbdaydate() + "Days" } ${currentDate.getHours() + 'Hours'} : ${currentDate.getMinutes()+'Minutes'}: ${currentDate.getSeconds()+ 'Seconds'}: ${currentDate.getMilliseconds()+'Milliseconds'}`
     },1)
 
 
